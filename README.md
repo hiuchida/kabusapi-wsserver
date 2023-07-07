@@ -38,3 +38,12 @@ mvn jetty:run
 To try WebSocket processing, run the following project
 
 https://github.com/hiuchida/kabusapi-wsclient
+
+## Restrictions
+
+The following servers use the same port number (18080) and cannot run at the same time.
+
+- https://github.com/hiuchida/kabusapi-server
+  (kabusapi-server\src\main\resources\application.properties: server.port=18080)
+- https://github.com/hiuchida/kabusapi-wsserver
+  (kabusapi-wsserver\pom.xml: &lt;port>18080&lt;/port>)
