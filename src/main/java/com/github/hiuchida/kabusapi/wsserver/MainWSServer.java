@@ -33,8 +33,8 @@ public class MainWSServer {
 
 	@OnOpen
 	public void onOpen(Session session, EndpointConfig ec) {
-		System.out.println("onOpen: " + session.toString());
-		System.out.println("onOpen: " + ec.toString());
+		System.out.println("onOpen: uri=" + session.getRequestURI() + ", id=\'" + session.getId() + "\'");
+		System.out.println("onOpen: properties=" + ec.getUserProperties());
 		System.out.flush();
 		if (initSenderThread(session)) {
 			System.out.println("onOpen: senderThread start");
@@ -44,7 +44,7 @@ public class MainWSServer {
 	@OnMessage
 	public void onMessage(String message) {
 		try {
-			System.out.println("onMessge: " + message);
+			System.out.println("onMessage: " + message);
 			System.out.flush();
 		} catch (Throwable t) {
 			t.printStackTrace(System.out);
@@ -61,7 +61,8 @@ public class MainWSServer {
 
 	@OnClose
 	public void onClose(Session session, CloseReason reason) {
-		System.out.println("onClose: " + session.toString());
+		System.out.println("onClose: uri=" + session.getRequestURI() + ", id=\'" + session.getId() + "\'");
+		System.out.println("onClose: reason=" + reason.toString());
 		System.out.flush();
 	}
 
