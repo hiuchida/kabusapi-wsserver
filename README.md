@@ -3,7 +3,7 @@ Example of a WebSocket server simulating the kabu station PUSH API.
 
 ## Requirements
 
-Building the WebSocket application requires:
+Building the WebSocket server application requires:
 1. Java 1.7+
 2. Maven
 3. Dependent Maven Projects (Not registered in public repositories)
