@@ -35,6 +35,17 @@ Start your server as an simple java application.
 mvn jetty:run
 ```
 
+For Windows, run the batch file to suppress the following message when Ctrl+C is pressed.
+
+```shell
+run.bat
+```
+
+```
+バッチ ジョブを終了しますか (Y/N)?
+Terminate batch job (Y/N)?
+```
+
 To try WebSocket processing, run the following project
 
 https://github.com/hiuchida/kabusapi-wsclient
