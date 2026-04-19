@@ -180,7 +180,7 @@
   </dependencies>
 
   <properties>
-    <java.version>1.7</java.version>
+    <java.version>1.8</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <kabusapi-client-ex-version>1.3.0</kabusapi-client-ex-version>
